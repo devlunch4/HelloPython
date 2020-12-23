@@ -1,14 +1,9 @@
 package oop;
 
-public class Human {
-	public boolean egg = false;
-	public int age = 0;
-
-	public void getOld() {
-		age++;
-	}
-
-	public int getAge() {
-		return age;
+public class Human extends Animal{
+	public int moneypower = 11;
+	
+	public void makeMoney(int earnmoney) {
+		moneypower += earnmoney;
 	}
 }
