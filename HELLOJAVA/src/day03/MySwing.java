@@ -1,6 +1,5 @@
 package day03;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,6 +12,10 @@ import java.awt.event.MouseEvent;
 
 public class MySwing extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -41,19 +44,19 @@ public class MySwing extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lbl = new JLabel("Good Morning");
 		lbl.setBounds(177, 100, 85, 17);
 		contentPane.add(lbl);
-		
+
 		JButton btn = new JButton("click");
 		btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				System.out.println("click btn Å¬¸¯¹öÆ° Å¬¸¯");
+				System.out.println("click btn Å¬ï¿½ï¿½ï¿½ï¿½Æ° Å¬ï¿½ï¿½");
 				lbl.setText("Good Evening");
-				
-				}
+
+			}
 		});
 		btn.setBounds(175, 127, 97, 23);
 		contentPane.add(btn);

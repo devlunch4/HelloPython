@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 
 # UI파일 연결
 # 단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
-form_class = uic.loadUiType("myqt02.ui")[0]
+form_class = uic.loadUiType("myqt03.ui")[0]
 
 
 # 화면을 띄우는데 사용되는 Class 선언
@@ -16,10 +16,10 @@ class MyWindow(QMainWindow, form_class):
         self.setupUi(self)
 
     # 버튼에 기능을 연결하는 코드
-        self.pb.clicked.connect(self.pbFunction)
+        self.pb.clicked.connect(self.pb_click)
 
-    # pb 눌리면 작동할 함수
-    def pbFunction(self):
+    # pb 눌리면 작동할 함수 >> 클릭시 1씩 증가
+    def pb_click(self):
         a = int(self.le.text())
         print(a)
         self.le.setText(str(a + 1))
