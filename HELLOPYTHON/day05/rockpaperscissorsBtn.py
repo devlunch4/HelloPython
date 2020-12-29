@@ -44,10 +44,24 @@ class MyWindow(QMainWindow, form_class):
         
         if a == comx: 
             result = "비겼습니다"
+            self.le3.setStyleSheet("QLineEdit"
+                        "{"
+                        "background : yellow;"
+                        "}")
+            
         elif (a == "가위" and comx == "보") or (a == "바위" and comx == "가위") or (a == "보" and comx == "바위"):
             result = "이겼습니다."
+            self.le3.setStyleSheet("QLineEdit"
+                        "{"
+                        "background : green;"
+                        "}")
+            
         else:
             result = "졌습니다."
+            self.le3.setStyleSheet("QLineEdit"
+                        "{"
+                        "background : red;"
+                        "}")
         print(result)
         self.le3.setText(result) 
 
