@@ -6,20 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>450</width>
     <height>420</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pbreset">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>0</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>450</width>
      <height>21</height>
     </rect>
    </property>
@@ -31,11 +45,6 @@
    <addaction name="menuOmok"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionreset">
-   <property name="text">
-    <string>reset</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections/>
