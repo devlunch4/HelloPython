@@ -20,7 +20,7 @@
 	<script type="text/javascript">
 	
     // 사용할 앱의 JavaScript 키를 설정
-    Kakao.init('71c959dae2a4fb40829db6f796a1f9b6');
+    Kakao.init('키값');
     // 카카오 내비 버튼을 생성합니다.
   function navi() {
     Kakao.Navi.start({
