@@ -14,17 +14,13 @@ x = np.array([0, 0, 0, 0, 0])
 y = np.array([0, 1, 2, 3, 4])
 z = np.array([4, 1, 2, 3, 4])
 
-
-
-
 print("x :", x)
 print("y :", y)
 
-
 # plot test data
 ax.plot(x, y, z)
-ax.plot(x+1, y, z)
-ax.plot(x+2, y, z)
+ax.plot(x + 1, y, z - 1)
+ax.plot(x + 2, y, z + 1)
 
 # make labels
 ax.set_xlabel('X')
