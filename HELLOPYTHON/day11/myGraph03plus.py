@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pymysql
+import time
 
 
 # 함수화를 위한 클래스 설정
@@ -44,7 +45,7 @@ class MyManager:
         self.cursor.execute(sql, (s_name,))
         rows = self.cursor.fetchall()
         self.fvalue = (str(rows[0][2]))
-        print("self.fvalue 시작가 :", self.fvalue)
+        #print("self.fvalue 시작가 :", self.fvalue)
         # 최종값 설정
         sql = "SELECT s_code, s_name, s_price, in_time FROM stock WHERE s_name = %s ORDER BY in_time"
         self.cursor.execute(sql, (s_name,))
@@ -61,7 +62,7 @@ class MyManager:
             prices.append((pvalue - zerobreak) / zerobreak * 100)
         return prices
 
-
+start = time.time()
 # MyManager CALL
 mm = MyManager()
 
@@ -93,12 +94,17 @@ for i in namelist:
     xplus += 1
     ax.plot(x + xplus, y, z)
     
-print ("마지막 x 배열", x, "마지막 z 배열", z)
+#print ("마지막 x 배열", x, "마지막 z 배열", z)
 
 # make labels
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 
-plt.show()
+
+end = time.time()
+elapse = end - start
+print("시작시간 :", start, "끝난시간 ", end)
+print("걸린시간 :", elapse)
 print ("출력완료!!!")
+plt.show()

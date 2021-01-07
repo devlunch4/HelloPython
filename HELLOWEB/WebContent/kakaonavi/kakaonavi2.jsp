@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <%-- <script src="<%=request.getContextPath()%>/js/kakao.js"></script> --%>
-<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src="//developers.kakao.com/sdk/js/kakao.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -18,18 +18,17 @@
 		src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png" />
 	</a>
 	<script type="text/javascript">
-	
-    // 사용할 앱의 JavaScript 키를 설정
-    Kakao.init('키값');
-    // 카카오 내비 버튼을 생성합니다.
-  function navi() {
-    Kakao.Navi.start({
-      name: '현대백화점 판교점',
-      x: 127.11205203011632,
-      y: 37.39279717586919,
-      coordType: 'wgs84',
-    })
-  }
-</script>
+		// 사용할 앱의 JavaScript 키를 설정
+		Kakao.init('키값');
+		// 카카오 내비 버튼을 생성합니다.
+		function navi() {
+			Kakao.Navi.start({
+				name : '현대백화점 판교점',
+				x : 127.11205203011632,
+				y : 37.39279717586919,
+				coordType : 'wgs84',
+			})
+		}
+	</script>
 </body>
 </html>
