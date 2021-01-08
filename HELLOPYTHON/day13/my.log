@@ -1,0 +1,68 @@
+2021-01-08 18:08:10,370 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:08:10,387 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '안녕'), (2, '홍길동', '길동'))
+2021-01-08 18:09:28,468 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:09:28,481 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '안녕'), (2, '홍길동', '길동'))
+2021-01-08 18:09:30,718 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:09:30,731 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '안녕'), (2, '홍길동', '길동'))
+2021-01-08 18:09:32,548 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:09:32,554 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '안녕'), (2, '홍길동', '길동'))
+2021-01-08 18:10:04,582 DEBUG [parent.child] [myflask02db.py:60] - ajax_upd 진입
+2021-01-08 18:10:04,582 DEBUG [parent.child] [myflask02db.py:64] - emp_id : 1
+2021-01-08 18:10:04,586 DEBUG [parent.child] [myflask02db.py:75] - ajax_upd 종료
+2021-01-08 18:10:20,531 DEBUG [parent.child] [myflask02db.py:60] - ajax_upd 진입
+2021-01-08 18:10:20,532 DEBUG [parent.child] [myflask02db.py:64] - emp_id : 1
+2021-01-08 18:10:20,548 DEBUG [parent.child] [myflask02db.py:75] - ajax_upd 종료
+2021-01-08 18:10:22,398 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:10:22,400 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'))
+2021-01-08 18:10:55,821 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:10:55,834 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'))
+2021-01-08 18:11:05,245 DEBUG [parent.child] [myflask02db.py:81] - ajax_ins 진입
+2021-01-08 18:11:05,245 DEBUG [parent.child] [myflask02db.py:85] - emp_id : 123
+2021-01-08 18:11:05,261 DEBUG [parent.child] [myflask02db.py:97] - ajax_ins 종료
+2021-01-08 18:11:05,989 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:11:06,000 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'))
+2021-01-08 18:13:36,167 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:13:36,182 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'))
+2021-01-08 18:13:42,676 DEBUG [parent.child] [myflask02db.py:81] - ajax_ins 진입
+2021-01-08 18:13:42,676 DEBUG [parent.child] [myflask02db.py:85] - 추가 값 >> 기존emp_id : , emp_name : qwe, nickname : qwe
+2021-01-08 18:13:42,692 DEBUG [parent.child] [myflask02db.py:97] - ajax_ins 종료
+2021-01-08 18:13:43,726 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:13:43,728 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'), (6, 'qwe', 'qwe'))
+2021-01-08 18:14:49,115 DEBUG [parent.child] [myflask02db.py:81] - ajax_ins 진입
+2021-01-08 18:14:49,116 DEBUG [parent.child] [myflask02db.py:85] - 추가 값 >> 기존emp_id : asd, emp_name : 자동생성됨, nickname : asd
+2021-01-08 18:14:49,125 DEBUG [parent.child] [myflask02db.py:97] - ajax_ins 종료
+2021-01-08 18:14:50,261 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:14:50,272 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'), (6, 'qwe', 'qwe'), (7, 'asd', 'asd'))
+2021-01-08 18:15:34,277 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:15:34,283 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'), (6, 'qwe', 'qwe'), (7, 'asd', 'asd'))
+2021-01-08 18:15:34,476 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:15:34,481 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'), (6, 'qwe', 'qwe'), (7, 'asd', 'asd'))
+2021-01-08 18:15:34,641 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:15:34,653 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'), (6, 'qwe', 'qwe'), (7, 'asd', 'asd'))
+2021-01-08 18:15:39,788 DEBUG [parent.child] [myflask02db.py:81] - ajax_ins 진입
+2021-01-08 18:15:39,788 DEBUG [parent.child] [myflask02db.py:85] - 추가 값 >> 기존emp_id : 자동생성됨, emp_name : asdasdasd, nickname : asdasdasd
+2021-01-08 18:15:39,805 DEBUG [parent.child] [myflask02db.py:97] - ajax_ins 종료
+2021-01-08 18:15:48,437 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:15:48,451 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'), (6, 'qwe', 'qwe'), (7, 'asd', 'asd'), (8, 'asdasdasd', 'asdasdasd'))
+2021-01-08 18:15:52,163 DEBUG [parent.child] [myflask02db.py:103] - ajax_del 진입
+2021-01-08 18:15:52,163 DEBUG [parent.child] [myflask02db.py:107] - 삭제 값 >> 기존emp_id : 8, emp_name : asdasdasd, nickname : asdasdasd
+2021-01-08 18:15:52,178 DEBUG [parent.child] [myflask02db.py:119] - ajax_del 종료
+2021-01-08 18:15:53,301 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:15:53,312 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'), (6, 'qwe', 'qwe'), (7, 'asd', 'asd'))
+2021-01-08 18:15:59,508 DEBUG [parent.child] [myflask02db.py:103] - ajax_del 진입
+2021-01-08 18:15:59,508 DEBUG [parent.child] [myflask02db.py:107] - 삭제 값 >> 기존emp_id : 7, emp_name : asd, nickname : asd
+2021-01-08 18:15:59,526 DEBUG [parent.child] [myflask02db.py:119] - ajax_del 종료
+2021-01-08 18:16:00,621 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:16:00,632 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'), (6, 'qwe', 'qwe'))
+2021-01-08 18:16:04,659 DEBUG [parent.child] [myflask02db.py:103] - ajax_del 진입
+2021-01-08 18:16:04,659 DEBUG [parent.child] [myflask02db.py:107] - 삭제 값 >> 기존emp_id : 6, emp_name : qwe, nickname : qwe
+2021-01-08 18:16:04,674 DEBUG [parent.child] [myflask02db.py:119] - ajax_del 종료
+2021-01-08 18:16:05,429 DEBUG [parent.child] [myflask02db.py:48] - db 진입
+2021-01-08 18:16:05,440 DEBUG [parent.child] [myflask02db.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'))
+2021-01-08 18:18:30,782 DEBUG [parent.child] [myflask02db2.py:48] - db 진입
+2021-01-08 18:18:30,793 DEBUG [parent.child] [myflask02db2.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'), (5, '123', '123'))
+2021-01-08 18:18:35,252 DEBUG [parent.child] [myflask02db2.py:103] - ajax_del 진입
+2021-01-08 18:18:35,252 DEBUG [parent.child] [myflask02db2.py:107] - 삭제 값 >> 기존emp_id : 5, emp_name : 123, nickname : 123
+2021-01-08 18:18:35,271 DEBUG [parent.child] [myflask02db2.py:119] - ajax_del 종료
+2021-01-08 18:18:36,021 DEBUG [parent.child] [myflask02db2.py:48] - db 진입
+2021-01-08 18:18:36,032 DEBUG [parent.child] [myflask02db2.py:54] - ((1, '홍길동', '123'), (2, '홍길동', '길동'))
