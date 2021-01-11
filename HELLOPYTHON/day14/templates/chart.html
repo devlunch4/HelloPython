@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="/static/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+	function upd() {
+		var s_code = $("#s_code").val();
+		var s_name = $("#s_name").val();
+		var s_price = $("#s_price").val();
+		var in_time = $("#in_time").val();
+
+		$("#s_code").val(s_code);
+		$("#s_name").val(s_name);
+		$("#s_price").val(s_price);
+		$("#in_time").val(in_time);
+
+		$.ajax({
+			type : 'GET',
+			url : '/upd.ajax',
+			data : {
+				s_code : s_code,
+				s_name : s_name,
+				s_price : s_price
+			},
+			dataType : 'JSON',
+			success : function(data) {
+				var obj_jason = JSON.parse(data)
+				alert("obj_jason" + obj_jason + " : " + obj_jason.cnt);
+				if (obj_jason.cnt == 1) {
+					alert("수정이 정상적으로 수행되었습니다.");
+					window.location.reload();
+				} else {
+					alert("수정 문제 발생 하였습니다.");
+				}
+			},
+			error : function(xtr, status, error) {
+				alert("실패 " + xtr + ":" + status + ":" + error);
+			}
+		});
+
+	}
+
+	function del() {
+
+		var s_code = $("#s_code").val();
+		var s_name = $("#s_name").val();
+		var s_price = $("#s_price").val();
+		var in_time = $("#in_time").val();
+
+		$("#s_code").val(s_code);
+		$("#s_name").val(s_name);
+		$("#s_price").val(s_price);
+		$("#in_time").val(in_time);
+
+		$.ajax({
+			type : 'GET',
+			url : '/del.ajax',
+			data : {
+				s_code : s_code,
+				s_name : s_name,
+				s_price : s_price
+			},
+			dataType : 'JSON',
+			success : function(result) {
+				alert("result = " + result);
+				window.location.reload()
+
+			},
+			error : function(xtr, status, error) {
+				alert("실패 " + xtr + ":" + status + ":" + error);
+			}
+		});
+	}
+
+	function ins() {
+
+		var s_code = $("#s_code").val();
+		var s_name = $("#s_name").val();
+		var s_price = $("#s_price").val();
+		var in_time = $("#in_time").val();
+
+		$("#s_code").val(s_code);
+		$("#s_name").val(s_name);
+		$("#s_price").val(s_price);
+		$("#in_time").val(in_time);
+
+		$.ajax({
+			type : 'GET',
+			url : '/ins.ajax',
+			data : {
+				s_code : s_code,
+				s_name : s_name,
+				s_price : s_price
+			},
+			dataType : 'JSON',
+			success : function(result) {
+				alert("result = " + result);
+				window.location.reload()
+			},
+			error : function(xtr, status, error) {
+				alert("실패 " + xtr + ":" + status + ":" + error);
+			}
+		});
+
+	}
+
+	function setEmp(s_code, s_name, s_price, in_time) {
+		alert("setEmp 진입");
+
+		$("#s_code").val(s_code);
+		$("#s_name").val(s_name);
+		$("#s_price").val(s_price);
+		$("#in_time").val(in_time);
+
+		//var obj_s_code = document.getElementById("s_code")
+		//var obj_s_name = document.getElementById("s_name")
+		//var obj_s_price = document.getElementById("s_price")
+
+		//obj_s_code.value = s_code;
+		//obj_s_name.value = s_name;
+		//obj_s_price.value = s_price; 
+
+	}
+</script>
+</head>
+<body>
+
+	EMP CRUD
+	<br>
+	<table border="2">
+		<tr>
+			<td>
+
+				<table border="1">
+					<tr>
+						<td>s_code</td>
+						<td>s_name</td>
+						<td>s_price</td>
+						<td>in_time</td>
+					</tr>
+					{% for i in db_list %}
+					<tr>
+						<td><a
+							href="javascript:setEmp('{{ i[0] }}', '{{ i[1] }}', '{{ i[2] }}','{{ i[3] }}')">{{
+								i[0] }}</a></td>
+						<td>{{ i[1] }}</td>
+						<td>{{ i[2] }}</td>
+						<td>{{ i[3] }}</td>
+					</tr>
+					{% endfor %}
+				</table>
+
+			</td>
+
+		</tr>
+	</table>
+
+</body>
+</html>
