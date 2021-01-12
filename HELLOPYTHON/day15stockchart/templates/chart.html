@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../src/jquery.jqplot.js"></script>
+<script type="text/javascript"
+	src="../src/plugins/jqplot.canvasTextRenderer.js"></script>
+<script type="text/javascript"
+	src="../src/plugins/jqplot.canvasAxisLabelRenderer.js"></script>
+<link rel="stylesheet" type="text/css" href="../src/jquery.jqplot.css" /> -->
+
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="./static/jquery.jqplot.js"></script>
+<script type="text/javascript"
+	src="./static/plugins/jqplot.canvasTextRenderer.js"></script>
+<script type="text/javascript"
+	src="./static/plugins/jqplot.canvasAxisLabelRenderer.js"></script>
+<link rel="stylesheet" type="text/css" href="./static/jquery.jqplot.css" />
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var stocks = [];
+
+		var cosPoints = [];
+		var sinPoints = [];
+		var powPoints1 = [];
+		var powPoints2 = [];
+
+		cosPoints.push([])
+
+		stocks.push(cosPoints);
+		stocks.push(sinPoints);
+		stocks.push(powPoints1);
+		stocks.push(powPoints2);
+
+		var plot3 = $.jqplot('chart3', stocks, {
+			title : 'Line Style Options',
+			// Set default options on all series, turn on smoothing.
+			seriesDefaults : {
+				rendererOptions : {
+					smooth : true
+				}
+			},
+			// Series options are specified as an array of objects, one object
+			// for each series.
+			series : [ {
+				// Change our line width and use a diamond shaped marker.
+				lineWidth : 2,
+				markerOptions : {
+					style : 'diamond'
+				}
+			}, {
+				// Don't show a line, just show markers.
+				// Make the markers 7 pixels with an 'x' style
+				showLine : false,
+				markerOptions : {
+					size : 7,
+					style : "x"
+				}
+			}, {
+				// Use (open) circlular markers.
+				markerOptions : {
+					style : "circle"
+				}
+			}, {
+				// Use a thicker, 5 pixel line and 10 pixel
+				// filled square markers.
+				lineWidth : 5,
+				markerOptions : {
+					style : "filledSquare",
+					size : 10
+				}
+			} ]
+		});
+	});
+</script>
+
+</head>
+<body>
+	hello chart
+	<div id="chart3"></div>
+	<table>
+		{% for i in db_list %}
+		<tr>
+			<td>{{ i[0] }}</td>
+			<td>{{ i[1] }}</td>
+			<td>{{ i[2] }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
