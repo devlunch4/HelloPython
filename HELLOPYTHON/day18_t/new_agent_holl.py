@@ -14,10 +14,7 @@ FLAG_MODEL = False
 TRAIN_START = 1000
 MEMORY_DEQUE = 2000
 
-
-# 게임환경
 class GameEnv:
-
 	def __init__(self):
 		self.score = 0
 		self.arr_com = []
@@ -59,13 +56,9 @@ class GameEnv:
 	def do_work(self, mine):
 		if self.arr_com[self.seq] == mine:
 			self.score += 1
-
 		self.seq += 1
 
-
-# 신경망관리
 class Agent:
-
 	def __init__(self):
 		self.load_model = FLAG_MODEL
 
@@ -85,7 +78,7 @@ class Agent:
 		self.model = self.build_model()
 		self.model_target = self.build_model()
 		self.update_model_target()
-		self.memory = deque(maxlen=MEMORY_DEQUE)
+		self.memory = deque(maxlen = MEMORY_DEQUE)
 
 		if self.load_model:
 			self.model          .load_weights('save_model/mdl_origin.h5')
@@ -93,10 +86,10 @@ class Agent:
 
 	def build_model(self):
 		model = Sequential()
-		model.add(Dense(10, input_dim=self.state_size, activation='relu', kernel_initializer='he_uniform'))
-		model.add(Dense(10, activation='relu', kernel_initializer='he_uniform'))
-		model.add(Dense(self.action_size, activation='linear', kernel_initializer='he_uniform'))
-		model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))
+		model.add(Dense(10, input_dim = self.state_size, activation = 'relu', kernel_initializer = 'he_uniform'))
+		model.add(Dense(10, activation = 'relu', kernel_initializer = 'he_uniform'))
+		model.add(Dense(self.action_size, activation = 'linear', kernel_initializer = 'he_uniform'))
+		model.compile(loss = 'mse', optimizer = Adam(lr = self.learning_rate))
 		return model
 
 	def append_in_memory(self, state, mine, reward, next_state, flag_end):
@@ -130,16 +123,15 @@ class Agent:
 			arr_state_next[i] = mini_batch[i][3]
 			arr_flag_end.append(mini_batch[i][4])
 
-		arr_predict = self.model.predict(arr_state)
-		arr_predict_target = self.model_target.predict(arr_state_next)
+		arr_predict      = self.model.predict(arr_state)
+		arr_predict_target  = self.model_target.predict(arr_state_next)
 
 		for i in range(self.batch_size):
 			arr_predict[i][arr_mine[i]] = arr_reward[i] + self.discount_factor * np.amax(arr_predict_target[i])
 # 			if i == 0:
 # 				print(i,"------------arr_reward[i]:",arr_reward[i],"self.discount_factor:",self.discount_factor,"np.amax(arr_predict_target[i]):",arr_predict_target[i][0],arr_predict_target[i][1])
 			
-		self.model.fit(arr_state, arr_predict, batch_size=self.batch_size, epochs=1, verbose=0)
-
+		self.model.fit(arr_state, arr_predict, batch_size = self.batch_size, epochs = 1, verbose = 0)
 
 if __name__ == "__main__":
 	gameenv = GameEnv()
@@ -176,7 +168,7 @@ if __name__ == "__main__":
 			arr_episode.append(epi)
 			pylab.plot(arr_episode, arr_score, 'b')
 			pylab.savefig("agent.png")
-			print("episode: ", epi, " global_step", global_step, " score: ", score, " epsilon: ", agent.epsilon)
+			print("episode: ", epi," global_step", global_step, " score: ", score, " epsilon: ", agent.epsilon)
 
 		if epi % 100 == 0:
 			print("save_weights")

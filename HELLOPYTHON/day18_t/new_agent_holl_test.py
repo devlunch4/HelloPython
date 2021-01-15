@@ -5,14 +5,6 @@ from keras.models import Sequential
 from collections import deque
 from random import *
 
-
-
-
-
-
-
-
-#신경망
 def build_model():
 	model = Sequential()
 	model.add(Dense(10, input_dim = 1, activation = 'relu', kernel_initializer = 'he_uniform'))
@@ -21,13 +13,11 @@ def build_model():
 	model.compile(loss = 'mse', optimizer = Adam(lr = 0.001))
 	return model
 
-
 if __name__ == "__main__":
 	model = build_model()
-	#model.load_weights('save_model2/mdl_origin.h5')
+# 	model.load_weights('save_model/mdl_origin.h5')
 	
 	model.summary()
-
 	jumsu = 0
 	for i in range(50):
 		mine = randint(0,1)
@@ -38,7 +28,7 @@ if __name__ == "__main__":
 		# 인공지능의 출력을 받는다 
 		numpy_mine = np.float32(numpy_mine)
 		q_values = model.predict(numpy_mine)
-		print("q_values :",q_values)
+		print(q_values)
 		com = np.argmax(q_values[0])
 
 		# 데이터 출력
